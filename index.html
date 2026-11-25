@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mbali Mdhlalose | Cybersecurity Trainee</title>
+<style>
+:root {
+  --bg: #0b1424;
+  --panel: #142238;
+  --blue: #65a9ff;
+  --white: #f4f7fc;
+  --muted: #a9b7ca;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--white);
+  line-height: 1.7;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  border-bottom: 1px solid #25364e;
+}
+.logo { font-weight: bold; font-size: 20px; }
+.logo span { color: var(--blue); }
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+nav a:hover { color: var(--blue); }
+section { padding: 75px 10%; }
+.hero {
+  min-height: 490px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.tag {
+  color: var(--blue);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+h1 { font-size: clamp(38px, 6vw, 65px); line-height: 1.15; margin: 20px 0; }
+h1 span, h2 span { color: var(--blue); }
+.hero p, .about p {
+  color: var(--muted);
+  max-width: 680px;
+}
+.btn {
+  display: inline-block;
+  margin-top: 28px;
+  background: var(--blue);
+  color: #071426;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  width: fit-content;
+}
+h2 { font-size: 32px; margin-bottom: 25px; }
+.panel {
+  background: var(--panel);
+  border: 1px solid #263c59;
+  border-radius: 12px;
+  padding: 24px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+.card h3 { font-size: 18px; margin-bottom: 10px; }
+.card p { color: var(--muted); font-size: 14px; }
+.card small { color: var(--blue); display: block; margin-top: 14px; }
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.skills span {
+  background: #192d47;
+  color: #b9d8ff;
+  padding: 9px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+footer {
+  padding: 30px 10%;
+  text-align: center;
+  border-top: 1px solid #25364e;
+  color: var(--muted);
+  font-size: 13px;
+}
+footer a { color: var(--blue); }
+@media(max-width:650px) {
+  nav { flex-direction: column; gap: 12px; }
+  nav a { margin: 0 6px; font-size: 12px; }
+  section { padding: 55px 7%; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">MBALI<span>.</span></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="tag">Welcome to my portfolio</div>
+  <h1>Mbali<br><span>Mdhlalose.</span></h1>
+  <h3>Cybersecurity Trainee | Technology Enthusiast</h3>
+  <p>
+    Developing my knowledge and technical skills in cybersecurity,
+    information technology and artificial intelligence.
+    Passionate about continuous learning and digital security.
+  </p>
+  <a class="btn" href="#about">Explore my portfolio</a>
+</section>
+
+<section id="about" class="about">
+  <div class="tag">Get to know me</div>
+  <h2>About <span>Me</span></h2>
+  <div class="panel">
+    <p>
+      I am Mbali Mdhlalose, a Cybersecurity Trainee with an
+      interest in information technology, cybersecurity and
+      emerging technologies.
+    </p>
+    <br>
+    <p>
+      My journey in technology includes academic exposure to
+      Informatics, professional development through IBM SkillsBuild
+      and Cisco Networking Academy, and ongoing cybersecurity training.
+    </p>
+    <br>
+    <p>
+      I am committed to strengthening my technical knowledge,
+      developing practical skills and growing within the cybersecurity
+      industry.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="tag">What I am developing</div>
+  <h2>Technical <span>Interests & Skills</span></h2>
+  <div class="skills">
+    <span>Cybersecurity Fundamentals</span>
+    <span>Information Technology</span>
+    <span>Artificial Intelligence</span>
+    <span>AI Fundamentals</span>
+    <span>Digital Literacy</span>
+    <span>Programming Fundamentals</span>
+    <span>IT Communication</span>
+    <span>Continuous Learning</span>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="tag">Professional development</div>
+  <h2>My <span>Certifications</span></h2>
+  <div class="grid">
+
+    <div class="panel card">
+      <h3>AI Fundamentals: Foundations for Understanding AI</h3>
+      <p>IBM SkillsBuild</p>
+      <small>Completed: 19 November 2026</small>
+    </div>
+
+    <div class="panel card">
+      <h3>AI Fundamentals: Language and Vision in AI</h3>
+      <p>IBM SkillsBuild</p>
+      <small>Completed: 23 November 2026</small>
+    </div>
+
+    <div class="panel card">
+      <h3>Digital Mindset</h3>
+      <p>IBM SkillsBuild</p>
+      <small>Completed: 11 November 2026</small>
+    </div>
+
+    <div class="panel card">
+      <h3>English for IT: People and Quantities</h3>
+      <p>Digital Youth ICT Academy – Cisco Networking Academy</p>
+      <small>Completed: 23 November 2026</small>
+    </div>
+
+  </div>
+</section>
+
+<section id="training">
+  <div class="tag">Current development</div>
+  <h2>Professional <span>Training</span></h2>
+  <div class="panel">
+    <h3>Cybersecurity Academy</h3>
+    <p>
+      Currently undertaking cybersecurity training,
+      developing foundational knowledge and technical
+      capabilities for a career in cybersecurity.
+    </p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="tag">Let's connect</div>
+  <h2>Get in <span>Touch</span></h2>
+  <div class="panel">
+    <p>
+      I welcome professional connections, learning opportunities
+      and conversations within the technology and cybersecurity space.
+    </p>
+    <br>
+    <p>Connect with me on LinkedIn and GitHub.</p>
+    <!-- Add your LinkedIn and email links here later -->
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Mbali Mdhlalose | Cybersecurity Trainee</p>
+  <p>Designed with a passion for technology and continuous growth.</p>
+</footer>
+
+</body>
+</html>
