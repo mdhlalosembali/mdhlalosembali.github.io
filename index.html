@@ -4,238 +4,430 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mbali Mdhlalose | Cybersecurity Trainee</title>
+<meta name="theme-color" content="#090B14">
+<title>Mbali Mdhlalose | Cybersecurity Portfolio</title>
 <style>
 :root {
-  --bg: #0b1424;
-  --panel: #142238;
-  --blue: #65a9ff;
-  --white: #f4f7fc;
-  --muted: #a9b7ca;
+  --bg:#090B14;
+  --panel:#121522;
+  --pink:#E7A0B8;
+  --pink2:#F3C1D2;
+  --white:#F7F5F8;
+  --muted:#A5A4B1;
+  --line:#302638;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  font-family: Arial, sans-serif;
-  background: var(--bg);
-  color: var(--white);
-  line-height: 1.7;
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--white);
+  font-family:Inter,Arial,sans-serif;line-height:1.7;
 }
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 22px 8%;
-  border-bottom: 1px solid #25364e;
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,90%);margin:auto}
+::selection{background:var(--pink);color:#090B14}
+
+body:before{
+  content:"";position:fixed;inset:0;z-index:-1;
+  background-image:
+  linear-gradient(#e7a0b808 1px,transparent 1px),
+  linear-gradient(90deg,#e7a0b808 1px,transparent 1px);
+  background-size:48px 48px;
 }
-.logo { font-weight: bold; font-size: 20px; }
-.logo span { color: var(--blue); }
-nav a {
-  color: var(--muted);
-  text-decoration: none;
-  margin-left: 20px;
-  font-size: 14px;
+nav{
+  position:sticky;top:0;z-index:10;
+  background:#090B14E8;backdrop-filter:blur(15px);
+  border-bottom:1px solid var(--line);
 }
-nav a:hover { color: var(--blue); }
-section { padding: 75px 10%; }
-.hero {
-  min-height: 490px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.nav{
+  min-height:75px;display:flex;justify-content:space-between;
+  align-items:center;gap:20px;
 }
-.tag {
-  color: var(--blue);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 12px;
-  font-weight: bold;
+.brand{font-size:19px;font-weight:800;letter-spacing:2px}
+.brand span{color:var(--pink)}
+.links{display:flex;gap:25px}
+.links a{font-size:11px;color:var(--muted);letter-spacing:1px}
+.links a:hover{color:var(--pink)}
+
+.hero{padding:100px 0 90px;position:relative}
+.hero-grid{
+  display:grid;grid-template-columns:1.2fr .8fr;
+  align-items:center;gap:55px;
 }
-h1 { font-size: clamp(38px, 6vw, 65px); line-height: 1.15; margin: 20px 0; }
-h1 span, h2 span { color: var(--blue); }
-.hero p, .about p {
-  color: var(--muted);
-  max-width: 680px;
+.eyebrow{
+  color:var(--pink);font-size:11px;
+  letter-spacing:3px;font-weight:700;
 }
-.btn {
-  display: inline-block;
-  margin-top: 28px;
-  background: var(--blue);
-  color: #071426;
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  width: fit-content;
+h1{
+  font-size:clamp(44px,6vw,76px);
+  line-height:1.12;letter-spacing:-3px;margin:24px 0;
 }
-h2 { font-size: 32px; margin-bottom: 25px; }
-.panel {
-  background: var(--panel);
-  border: 1px solid #263c59;
-  border-radius: 12px;
-  padding: 24px;
+.gradient{
+  background:linear-gradient(90deg,#E7A0B8,#F8D5E1);
+  -webkit-background-clip:text;color:transparent;
 }
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 20px;
+.intro{color:var(--muted);max-width:570px;font-size:16px}
+.buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{
+  display:inline-block;padding:12px 22px;
+  border:1px solid var(--pink);border-radius:4px;
+  color:#090B14;background:var(--pink);
+  font-size:11px;font-weight:800;letter-spacing:1px;
+  transition:.25s;
 }
-.card h3 { font-size: 18px; margin-bottom: 10px; }
-.card p { color: var(--muted); font-size: 14px; }
-.card small { color: var(--blue); display: block; margin-top: 14px; }
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+.btn:hover{background:var(--pink2);transform:translateY(-3px)}
+.btn.outline{background:transparent;color:var(--pink)}
+.availability{
+  margin-top:28px;font-size:11px;color:var(--muted);
+  display:flex;align-items:center;gap:9px;
 }
-.skills span {
-  background: #192d47;
-  color: #b9d8ff;
-  padding: 9px 16px;
-  border-radius: 20px;
-  font-size: 14px;
+.dot{width:8px;height:8px;border-radius:50%;background:#69D8A0}
+
+.security-visual{
+  border:1px solid #513749;border-radius:12px;
+  padding:28px;background:linear-gradient(145deg,#201724,#101522);
+  box-shadow:0 20px 70px #0008;
+  position:relative;overflow:hidden;
 }
-footer {
-  padding: 30px 10%;
-  text-align: center;
-  border-top: 1px solid #25364e;
-  color: var(--muted);
-  font-size: 13px;
+.security-visual:before{
+  content:"";position:absolute;width:220px;height:220px;
+  border:1px solid #E7A0B833;border-radius:50%;
+  top:-90px;right:-80px;
+  box-shadow:0 0 0 25px #E7A0B80B,0 0 0 50px #E7A0B807;
 }
-footer a { color: var(--blue); }
-@media(max-width:650px) {
-  nav { flex-direction: column; gap: 12px; }
-  nav a { margin: 0 6px; font-size: 12px; }
-  section { padding: 55px 7%; }
+.shield{
+  width:100px;height:100px;margin:25px auto;
+  border:1px solid var(--pink);
+  border-radius:28px 28px 45px 45px;
+  display:grid;place-items:center;
+  color:var(--pink);font-size:45px;
+  transform:rotate(45deg);
+  box-shadow:0 0 35px #E7A0B822;
+}
+.shield span{transform:rotate(-45deg)}
+.visual-title{text-align:center;letter-spacing:3px;font-size:13px}
+.visual-sub{text-align:center;color:var(--muted);font-size:10px;margin-top:8px}
+.visual-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:9px;margin-top:28px;
+}
+.visual-grid div{
+  background:#FFFFFF08;border:1px solid #FFFFFF12;
+  border-radius:5px;padding:12px 5px;text-align:center;
+  font-size:10px;color:var(--pink2);
+}
+.visual-grid b{display:block;font-size:19px;margin-bottom:5px}
+
+section{padding:85px 0;border-top:1px solid #302638}
+.section-head{margin-bottom:35px}
+.number{color:var(--pink);font-size:11px;letter-spacing:3px}
+.section-head h2{font-size:clamp(30px,4vw,43px);margin-top:10px}
+.section-head p{color:var(--muted);font-size:14px;margin-top:8px}
+
+.grid-two{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+.card{
+  background:var(--panel);border:1px solid var(--line);
+  padding:27px;border-radius:9px;transition:.25s;
+}
+.card:hover{border-color:var(--pink);transform:translateY(-4px)}
+.card h3{font-size:17px}
+.card p{font-size:13px;color:var(--muted);margin-top:12px}
+.interests{list-style:none;margin-top:12px}
+.interests li{
+  padding:10px 0;border-bottom:1px solid var(--line);
+  font-size:13px;color:var(--muted);
+}
+.interests li:before{content:"◈";color:var(--pink);margin-right:12px}
+
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.skill-icon{font-size:26px;color:var(--pink);margin-bottom:12px}
+.skill h3{font-size:16px}
+.skill p{font-size:12px;color:var(--muted);margin-top:7px}
+
+.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.cert{
+  background:var(--panel);border:1px solid var(--line);
+  padding:25px;border-radius:9px;
+}
+.cert small{color:var(--pink);letter-spacing:2px;font-size:10px}
+.cert h3{font-size:17px;margin:13px 0}
+.cert p{font-size:12px;color:var(--muted)}
+.cert span{display:block;color:var(--pink2);font-size:11px;margin-top:16px}
+
+.training{
+  padding:30px;border:1px solid #624052;
+  border-radius:10px;background:linear-gradient(110deg,#241925,#121522);
+}
+.training h3{font-size:21px;margin-top:10px}
+.training p{font-size:13px;color:var(--muted);margin-top:8px}
+.status{
+  display:inline-block;background:#19362D;
+  color:#79DCA9;padding:5px 12px;
+  border-radius:20px;font-size:10px;margin-top:17px;
+}
+
+.project{
+  border:1px dashed #79516A;background:#121522;
+  border-radius:10px;padding:30px;
+}
+.project h3{margin-top:10px}
+.project p{color:var(--muted);font-size:13px;margin-top:10px}
+.tag{
+  display:inline-block;border:1px solid #79516A;
+  color:var(--pink);padding:5px 10px;
+  font-size:10px;margin-top:17px;border-radius:4px;
+}
+
+.contact{
+  text-align:center;padding:60px 25px;
+  background:linear-gradient(135deg,#251A29,#101725);
+  border:1px solid #624052;border-radius:12px;
+}
+.contact h2{font-size:clamp(30px,5vw,45px);margin:12px 0}
+.contact p{color:var(--muted);font-size:14px;max-width:540px;margin:auto}
+.contact .buttons{justify-content:center}
+
+footer{padding:28px 0;border-top:1px solid var(--line)}
+.footer{
+  display:flex;justify-content:space-between;
+  gap:15px;flex-wrap:wrap;color:var(--muted);font-size:11px;
+}
+.footer span:first-child{color:var(--pink)}
+
+.reveal{opacity:0;transform:translateY(18px);transition:.7s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:760px){
+  .hero-grid,.grid-two{grid-template-columns:1fr}
+  .hero{padding:70px 0}
+  .links{gap:12px;flex-wrap:wrap;justify-content:center}
+  .links a{font-size:9px}
+  .nav{flex-direction:column;padding:15px 0}
+  .skills,.cert-grid{grid-template-columns:1fr}
+  section{padding:65px 0}
+}
+@media(prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
 }
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="logo">MBALI<span>.</span></div>
-  <div>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
+ <div class="container nav">
+  <a href="#" class="brand">MBALI<span>.</span></a>
+  <div class="links">
+   <a href="#about">ABOUT</a>
+   <a href="#skills">SKILLS</a>
+   <a href="#certifications">CERTIFICATIONS</a>
+   <a href="#projects">PROJECTS</a>
+   <a href="#contact">CONTACT</a>
   </div>
+ </div>
 </nav>
 
-<section class="hero">
-  <div class="tag">Welcome to my portfolio</div>
-  <h1>Mbali<br><span>Mdhlalose.</span></h1>
-  <h3>Cybersecurity Trainee | Technology Enthusiast</h3>
-  <p>
-    Developing my knowledge and technical skills in cybersecurity,
-    information technology and artificial intelligence.
-    Passionate about continuous learning and digital security.
-  </p>
-  <a class="btn" href="#about">Explore my portfolio</a>
-</section>
-
-<section id="about" class="about">
-  <div class="tag">Get to know me</div>
-  <h2>About <span>Me</span></h2>
-  <div class="panel">
-    <p>
-      I am Mbali Mdhlalose, a Cybersecurity Trainee with an
-      interest in information technology, cybersecurity and
-      emerging technologies.
-    </p>
-    <br>
-    <p>
-      My journey in technology includes academic exposure to
-      Informatics, professional development through IBM SkillsBuild
-      and Cisco Networking Academy, and ongoing cybersecurity training.
-    </p>
-    <br>
-    <p>
-      I am committed to strengthening my technical knowledge,
-      developing practical skills and growing within the cybersecurity
-      industry.
-    </p>
+<header class="hero">
+ <div class="container hero-grid">
+  <div>
+   <div class="eyebrow">CYBERSECURITY / TECHNOLOGY / INNOVATION</div>
+   <h1>Building a future in <span class="gradient">cybersecurity.</span></h1>
+   <p class="intro">
+    I'm Mbali Mdhlalose, a Cybersecurity Trainee with an
+    academic background in Information Technology and a
+    growing interest in digital security, artificial intelligence
+    and technology.
+   </p>
+   <div class="buttons">
+    <a href="#about" class="btn">EXPLORE MY PROFILE ↗</a>
+    <a href="#certifications" class="btn outline">VIEW CERTIFICATIONS</a>
+   </div>
+   <div class="availability"><span class="dot"></span> LEARNING • BUILDING • EVOLVING</div>
   </div>
+
+  <div class="security-visual">
+   <div class="eyebrow">DIGITAL SECURITY PROFILE</div>
+   <div class="shield"><span>⌑</span></div>
+   <div class="visual-title">SECURE. ANALYSE. PROTECT.</div>
+   <div class="visual-sub">A JOURNEY INTO CYBERSECURITY</div>
+   <div class="visual-grid">
+    <div><b>⌑</b>INFORMATION<br>SECURITY</div>
+    <div><b>⌕</b>THREAT<br>DETECTION</div>
+    <div><b>⌘</b>NETWORK<br>SECURITY</div>
+   </div>
+  </div>
+ </div>
+</header>
+
+<section id="about">
+ <div class="container reveal">
+  <div class="section-head">
+   <div class="number">01 / ABOUT ME</div>
+   <h2>More than a <span class="gradient">profile.</span></h2>
+   <p>My background, interests and professional direction.</p>
+  </div>
+  <div class="grid-two">
+   <div class="card">
+    <h3>My journey into technology</h3>
+    <p>
+     I am Mbali Mdhlalose, a Cybersecurity Trainee developing
+     my technical knowledge and professional capabilities.
+    </p>
+    <p>
+     My academic background in Informatics introduced me to
+     programming fundamentals, systems analysis, business
+     analysis and information technology.
+    </p>
+    <p>
+     I am continuing to expand my knowledge through
+     cybersecurity training, certifications and practical learning.
+     My goal is to build a meaningful career in the technology
+     and cybersecurity space.
+    </p>
+   </div>
+   <div class="card">
+    <h3>Areas of interest</h3>
+    <ul class="interests">
+     <li>Cybersecurity fundamentals</li>
+     <li>Information security</li>
+     <li>Threat detection</li>
+     <li>Network security</li>
+     <li>Artificial intelligence</li>
+    </ul>
+   </div>
+  </div>
+ </div>
 </section>
 
 <section id="skills">
-  <div class="tag">What I am developing</div>
-  <h2>Technical <span>Interests & Skills</span></h2>
-  <div class="skills">
-    <span>Cybersecurity Fundamentals</span>
-    <span>Information Technology</span>
-    <span>Artificial Intelligence</span>
-    <span>AI Fundamentals</span>
-    <span>Digital Literacy</span>
-    <span>Programming Fundamentals</span>
-    <span>IT Communication</span>
-    <span>Continuous Learning</span>
+ <div class="container reveal">
+  <div class="section-head">
+   <div class="number">02 / CAPABILITIES</div>
+   <h2>Knowledge & <span class="gradient">interests.</span></h2>
+   <p>Areas of knowledge I am developing and exploring.</p>
   </div>
+  <div class="skills">
+   <div class="card">
+    <div class="skill-icon">⌑</div>
+    <h3>Cybersecurity</h3>
+    <p>Developing foundational knowledge of digital security and cybersecurity concepts.</p>
+   </div>
+   <div class="card">
+    <div class="skill-icon">⌘</div>
+    <h3>Information Technology</h3>
+    <p>Academic exposure to computing, IT systems and technology concepts.</p>
+   </div>
+   <div class="card">
+    <div class="skill-icon">◇</div>
+    <h3>Generative AI</h3>
+    <p>Prompt engineering, AI tools and practical generative AI applications.</p>
+   </div>
+   <div class="card">
+    <div class="skill-icon">⌨</div>
+    <h3>Systems & Analysis</h3>
+    <p>Academic exposure to programming, business analysis and systems analysis.</p>
+   </div>
+  </div>
+ </div>
 </section>
 
 <section id="certifications">
-  <div class="tag">Professional development</div>
-  <h2>My <span>Certifications</span></h2>
-  <div class="grid">
-
-    <div class="panel card">
-      <h3>AI Fundamentals: Foundations for Understanding AI</h3>
-      <p>IBM SkillsBuild</p>
-      <small>Completed: 19 November 2026</small>
-    </div>
-
-    <div class="panel card">
-      <h3>AI Fundamentals: Language and Vision in AI</h3>
-      <p>IBM SkillsBuild</p>
-      <small>Completed: 23 November 2026</small>
-    </div>
-
-    <div class="panel card">
-      <h3>Digital Mindset</h3>
-      <p>IBM SkillsBuild</p>
-      <small>Completed: 11 November 2026</small>
-    </div>
-
-    <div class="panel card">
-      <h3>English for IT: People and Quantities</h3>
-      <p>Digital Youth ICT Academy – Cisco Networking Academy</p>
-      <small>Completed: 23 November 2026</small>
-    </div>
-
+ <div class="container reveal">
+  <div class="section-head">
+   <div class="number">03 / PROFESSIONAL DEVELOPMENT</div>
+   <h2>Learning in <span class="gradient">action.</span></h2>
+   <p>Verified credentials and continued learning.</p>
   </div>
+  <div class="cert-grid">
+   <div class="cert">
+    <small>01 / CAPACITI</small>
+    <h3>Generative AI: Prompt Engineering</h3>
+    <p>Certificate in generative AI and prompt engineering.</p>
+    <span>CAPACITI • 2026</span>
+   </div>
+   <div class="cert">
+    <small>02 / IBM SKILLSBUILD</small>
+    <h3>IBM Professional Certifications</h3>
+    <p>IBM certification achievements. Individual certificate titles can be added as separate entries.</p>
+    <span>IBM SKILLSBUILD</span>
+   </div>
+  </div>
+ </div>
 </section>
 
 <section id="training">
-  <div class="tag">Current development</div>
-  <h2>Professional <span>Training</span></h2>
-  <div class="panel">
-    <h3>Cybersecurity Academy</h3>
-    <p>
-      Currently undertaking cybersecurity training,
-      developing foundational knowledge and technical
-      capabilities for a career in cybersecurity.
-    </p>
+ <div class="container reveal">
+  <div class="section-head">
+   <div class="number">04 / CURRENT DEVELOPMENT</div>
+   <h2>Growing through <span class="gradient">experience.</span></h2>
   </div>
+  <div class="training">
+   <div class="eyebrow">CURRENT PROFESSIONAL FOCUS</div>
+   <h3>Cybersecurity Trainee</h3>
+   <p>
+    Building cybersecurity knowledge, strengthening technical
+    foundations and developing practical capabilities through
+    ongoing learning and training.
+   </p>
+   <span class="status">● CURRENTLY DEVELOPING</span>
+  </div>
+ </div>
+</section>
+
+<section id="projects">
+ <div class="container reveal">
+  <div class="section-head">
+   <div class="number">05 / PRACTICAL EXPERIENCE</div>
+   <h2>Projects & <span class="gradient">exploration.</span></h2>
+   <p>A growing collection of practical work and technical learning.</p>
+  </div>
+  <div class="project">
+   <div class="number">PROJECT SPACE / 001</div>
+   <h3>My cybersecurity projects are coming soon.</h3>
+   <p>
+    This space will showcase practical exercises, security
+    activities, technical projects and lessons learned as I
+    progress in my cybersecurity training.
+   </p>
+   <span class="tag">PORTFOLIO IN DEVELOPMENT</span>
+  </div>
+ </div>
 </section>
 
 <section id="contact">
-  <div class="tag">Let's connect</div>
-  <h2>Get in <span>Touch</span></h2>
-  <div class="panel">
-    <p>
-      I welcome professional connections, learning opportunities
-      and conversations within the technology and cybersecurity space.
-    </p>
-    <br>
-    <p>Connect with me on LinkedIn and GitHub.</p>
-    <!-- Add your LinkedIn and email links here later -->
+ <div class="container reveal">
+  <div class="contact">
+   <div class="eyebrow">LET'S CONNECT</div>
+   <h2>Building connections. <span class="gradient">Creating impact.</span></h2>
+   <p>
+    Open to connecting with technology professionals,
+    cybersecurity communities, recruiters and fellow learners.
+   </p>
+   <div class="buttons">
+    <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LINKEDIN ↗</a>
+    <a class="btn outline" href="https://github.com/mdhlalosembali" target="_blank" rel="noopener">GITHUB ↗</a>
+   </div>
   </div>
+ </div>
 </section>
 
 <footer>
-  <p>© 2026 Mbali Mdhlalose | Cybersecurity Trainee</p>
-  <p>Designed with a passion for technology and continuous growth.</p>
+ <div class="container footer">
+  <span>MBALI MDHLALOSE | CYBERSECURITY PORTFOLIO</span>
+  <span>© 2026 • LEARN. BUILD. EVOLVE.</span>
+ </div>
 </footer>
 
+<script>
+const observer = new IntersectionObserver(entries => {
+ entries.forEach(entry => {
+  if(entry.isIntersecting) {
+   entry.target.classList.add('visible');
+   observer.unobserve(entry.target);
+  }
+ });
+},{threshold:0.12});
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
